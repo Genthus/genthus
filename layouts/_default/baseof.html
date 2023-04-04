@@ -1,0 +1,14 @@
+<html>
+    {{ partial "head.html" }}
+    <body class="h-full">
+        {{partial "nav.html"}}
+        <main>
+            <article>
+                {{ block "main" . }} {{ .Content }} {{ end }} {{ if .Param
+                "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}} {{ if
+                .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
+            </article>
+        </main>
+        {{ block "footer" . }} {{ partial "footer.html" .}} {{ end }}
+    </body>
+</html>

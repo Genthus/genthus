@@ -1,0 +1,25 @@
+{
+    "name": "genthus-site",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve": "concurrently --kill-others \"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/index.css --jit --watch\" \"hugo serve -D --disableFastRender --navigateToChanged\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Genthus/genthus-site.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Genthus/genthus-site/issues"
+    },
+    "homepage": "https://github.com/Genthus/genthus-site#readme",
+    "devDependencies": {
+        "autoprefixer": "10.4.14",
+        "postcss": "8.4.21",
+        "tailwindcss": "3.3.1"
+    }
+}

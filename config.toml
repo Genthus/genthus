@@ -2,4 +2,5 @@ baseURL = 'http://genthus.art/'
 languageCode = 'en-us'
 title = 'Genthus'
 
-theme = 'lugo'
+[build]
+  writeStats = true

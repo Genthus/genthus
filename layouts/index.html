@@ -1,1 +1,27 @@
-{{ define "title" -}} {{ .Title }} {{- end }}
+{{ define "main" }}
+<article>
+    <div class="h-full flex">
+        <div class="w-96 flex-column h-screen bg-blue-50 p-2">
+            <h2 class="text-xl">
+                Hi I'm Genthus, an aspiring digital illustrator
+            </h2>
+            <ul class="p-4 flex-row m-auto">
+                <li class="text-blue-900">
+                    <a href="https://patreon.com/genthus">Patreon</a>
+                </li>
+                <li class="text-blue-900">
+                    <a href="https://twitter.com/genthus_">Twitter</a>
+                </li>
+                <li class="text-blue-900">
+                    <a href="https://www.pixiv.net/en/users/61808993">Pixiv</a>
+                </li>
+                <li class="text-blue-900">
+                    <a href="https://twitch.com/genthus_">Twitch</a>
+                </li>
+                <li>Discord: Genthus#0443</li>
+            </ul>
+        </div>
+        <div class="bg-blue-500 grow column-3"></div>
+    </div>
+</article>
+{{ end }}
