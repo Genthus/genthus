@@ -1,20 +1,23 @@
-{{ define "title" -}}
-{{ .Title | title }}
-{{- end }}
-{{ define "main" -}}
-{{ .Content }}
-<ul>
-{{- range.Pages }}
-<li>
-	{{- if .Param "datesinlist" }}<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time> &ndash; {{ end -}}
-	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-	{{- if .Param "authorsinlist" }}
-	{{ with .Params.authors }}
-		by 
-		{{ delimit . ", " " and " }}
-	{{end}}
-	{{ end -}}
-</li>
-{{- end }}
-</ul>
-{{- end }}
+{{ define "main" }}
+<main>
+  <div
+    class="flex flex-col gap-4 w-full h-auto m-auto p-8 justify-center items-center bg-white text-black"
+  >
+    <h1 id="title" class="text-4xl sm:text-6xl font-bold">{{ .Title }}</h1>
+  <article>
+    {{ .Content }}
+        </article>
+        <ul class="container-md m-auto sm:w-3/6 p-2 sm:px-16 bg-gray-950">
+            {{ range .Pages }}
+            <li class="m-auto w-full p-1">
+                <a href="{{ .Permalink }}" class="flex bg-white p-1 transition duration-150 hover:bg-pink-500">
+                    <div class="grow flex justify-between gap-4 p-1 items-center">
+                        <label class="text-lg font-bold">{{ .Title }}</label> 
+                        <label class="border-blue-700">{{ .Date.Format "2006-01-02" }}</label>
+                    </div>
+                </a>
+            </li>
+            {{ end }}
+  </ul>
+</main>
+{{ end }}

@@ -1,27 +1,139 @@
 {{ define "main" }}
 <article>
-    <div class="h-full flex">
-        <div class="w-96 flex-column h-screen bg-blue-50 p-2">
-            <h2 class="text-xl">
-                Hi I'm Genthus, an aspiring digital illustrator
-            </h2>
-            <ul class="p-4 flex-row m-auto">
-                <li class="text-blue-900">
-                    <a href="https://patreon.com/genthus">Patreon</a>
-                </li>
-                <li class="text-blue-900">
-                    <a href="https://twitter.com/genthus_">Twitter</a>
-                </li>
-                <li class="text-blue-900">
-                    <a href="https://www.pixiv.net/en/users/61808993">Pixiv</a>
-                </li>
-                <li class="text-blue-900">
-                    <a href="https://twitch.com/genthus_">Twitch</a>
-                </li>
-                <li>Discord: Genthus#0443</li>
-            </ul>
-        </div>
-        <div class="bg-blue-500 grow column-3"></div>
+  <div class="h-full sm:flex">
+    <div
+      class="sm:w-2/6 lg:w-96 flex flex-col gap-4 sm:gap-16 bg-blue-700 p-4 text-white overflow-scroll"
+    >
+      <h2 class="basis-1/8 m-auto p-4 text-2xl font-syne">
+        Hi I'm Genthus, an aspiring digital illustrator, I also do programming
+        and language learning.
+      </h2>
+      <div class="m-auto w-full flex flex-col text-2xl gap-2">
+        <a
+          href="/commissions"
+          class="m-auto bg-gray-950 p-4 w-full border-2 border-white text-white transition duration-150 hover:bg-pink-500"
+          >Commissions</a
+        >
+        <a
+          href="/blog"
+          class="m-auto bg-gray-950 p-4 w-full border-2 border-white text-white transition duration-150 hover:bg-pink-500"
+          >Blog</a
+        >
+        <a
+          href="/about"
+          class="m-auto bg-gray-950 p-4 w-full border-2 border-white text-white transition duration-150 hover:bg-pink-500"
+          >About</a
+        >
+      </div>
+      <ul class="basis-3/6 m-auto w-5/6 flex flex-col gap-2">
+        <li>
+          <a
+            href="https://patreon.com/genthus"
+            class="flex justify-between p-4 pr-8 transition duration-150 bg-gray-950 hover:bg-pink-500"
+          >
+            {{ with $image := resources.GetMatch "images/patreon.png" }} {{
+            $image := $image.Fit "40x30" }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+            />
+            {{ end }}
+            <label class="text-xl"> Patreon </label>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/genthus_"
+            class="flex justify-between p-4 pr-8 transition duration-150 bg-gray-950 hover:bg-pink-500"
+          >
+            {{ with $image := resources.GetMatch "images/twitter.png" }} {{
+            $image := $image.Fit "40x30" }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+            />
+            {{ end }}
+            <label class="text-xl"> Twitter </label>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.pixiv.net/en/users/61808993"
+            class="flex justify-between p-4 pr-8 transition duration-150 bg-gray-950 hover:bg-pink-500"
+          >
+            {{ with $image := resources.GetMatch "images/pixiv.png" }} {{ $image
+            := $image.Fit "40x30" }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+            />
+            {{ end }}
+            <label class="text-xl"> Pixiv </label>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitch.tv/genthus_"
+            class="flex justify-between p-4 pr-8 transition duration-150 bg-gray-950 hover:bg-pink-500"
+          >
+            {{ with $image := resources.GetMatch "images/twitch.png" }} {{
+            $image := $image.Fit "40x30" }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+            />
+            {{ end }}
+            <label class="text-xl"> Twitch </label>
+          </a>
+        </li>
+        <li>
+          <div
+            class="flex justify-between p-4 pr-8 text-xl copy_text transition duration-150 bg-gray-950 hover:bg-pink-500"
+            onclick="CopyDisc()"
+          >
+            {{ with $image := resources.GetMatch "images/discord.png" }} {{
+            $image := $image.Fit "40x30" }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+            />
+            {{ end }}
+            <label id="discord">Genthus#0443</label>
+          </div>
+        </li>
+      </ul>
+      <p class="m-4 p-2 text-sm bg-gray-950">
+        This website is still under construction, some things might look weird.
+      </p>
     </div>
+    <div
+      class="h-full sm:h-screen grow bg-gradient-to-br from-blue-700 to-blue-900 sm:overflow-scroll"
+    >
+      <div class="relative columns-md md:colums:xs gap-2 p-4">
+        {{ range resources.Match "portfolio/*"}}
+        <img
+          src="{{ .RelPermalink }}"
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+          class="place-self-center m-auto p-2 drop-shadow-md"
+        />
+        {{ end }}
+      </div>
+    </div>
+  </div>
 </article>
+
+<script>
+  var copy_text_val = document.getElementById("discord");
+
+  function CopyDisc() {
+    navigator.clipboard.writeText(copy_text_val.innerHTML);
+    alert("copied to clipboard");
+  }
+</script>
 {{ end }}

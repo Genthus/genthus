@@ -1,14 +1,41 @@
 <html>
-    {{ partial "head.html" }}
-    <body class="h-full">
-        {{partial "nav.html"}}
-        <main>
-            <article>
-                {{ block "main" . }} {{ .Content }} {{ end }} {{ if .Param
-                "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}} {{ if
-                .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
-            </article>
-        </main>
-        {{ block "footer" . }} {{ partial "footer.html" .}} {{ end }}
-    </body>
+  {{ partial "head.html" }}
+  <body class="h-screen w-screen flex flex-col text-white bg-blue-700 gap-4">
+    {{ if not .IsHome }}
+    <nav class="bg-gray-950">
+      <div class="sm:flex w-full items-center justify-around">
+        <a
+          href="{{ .Site.BaseURL }}"
+          class="w-96 text-4xl bg-blue-700 p-4 text-white justify-center transition duration-150 hover:bg-pink-500"
+        >
+          Genthus</a
+        >
+        <div class="flex justify-right text-xl gap-8 bg-blue-700">
+          <a
+            href="/commissions"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500"
+            >Commissions</a
+          >
+          <a
+            href="/blog"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500"
+            >Blog</a
+          >
+          <a
+            href="/about"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500"
+            >About</a
+          >
+        </div>
+      </div>
+    </nav>
+    {{ end }}
+    <main class="grow">
+      <article class="">
+        {{ block "main" . }} {{ .Content }} {{ end }} {{ if .Param "nextprev"
+        }}{{ partial "nextprev.html" . -}}{{ end -}} {{ if .Param "taglist" }}{{
+        partial "taglist.html" . }}{{ end -}}
+      </article>
+    </main>
+  </body>
 </html>
