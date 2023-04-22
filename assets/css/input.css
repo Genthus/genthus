@@ -1,7 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: "Syne";
-  src: url("./fonts/Syne.ttf");
+
+@import url("https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&display=swap");
+@layer base {
+  html {
+    font-family: "Atkinson Hyperlegible", Helvetica, Arial, sans-serif;
+  }
+}
+/* Article CSS */
+.content {
+  @apply leading-loose text-justify text-slate-100 text-[1.1rem];
+}
+.content h1 {
+  @apply text-4xl my-8 font-bold;
+}
+.content h2 {
+  @apply text-2xl my-6;
+}
+.content h3 {
+  @apply text-xl my-4;
+}
+.content h4 {
+  @apply text-lg my-2;
+}
+.content h5 {
+  @apply text-base font-bold my-1;
+}
+.content h6 {
+  @apply text-base underline my-1;
+}
+.content ol {
+  @apply list-decimal mx-8;
+}
+.content ul {
+  @apply list-disc mx-8;
+}
+.content li {
+  @apply m-0;
+}
+.content a {
+  @apply underline text-blue-500;
+}
+.content p {
+  @apply my-4;
+}
+.content pre {
+  @apply bg-gray-800 px-2 rounded;
+}
+.content code {
+  @apply text-purple-300;
+}
+.content blockquote {
+  @apply text-gray-400 px-2 my-1 border-l-4 border-gray-400;
+}
+.content img {
+  @apply mx-auto;
 }

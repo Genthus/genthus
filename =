@@ -1,17 +1,17 @@
 {{ define "main" }}
-<section id="main" class="bg-gradient-to-b from-blue-700 to-pink-500">
+<section id="main" class="">
   <div
     class="flex flex-col gap-4 w-full h-auto m-auto p-8 justify-center items-center bg-white text-black"
   >
     <h1 id="title" class="text-4xl sm:text-6xl font-bold">{{ .Title }}</h1>
-    <div class="text-center">
+    <div>
       <h4 id="date">{{ .Date.Format "Mon Jan 2 , 2006" }}</h4>
       <h5 id="wordcount">{{ .WordCount }} Words</h5>
     </div>
   </div>
   <div>
     <div class="w-5/6 mx-auto bg-white">
-      <article id="content" class="sm:w-4/6 m-auto p-2 px-8 bg-zinc-800">
+      <article id="content" class="sm:w-3/6 m-auto p-2 px-8 bg-gray-900">
         <div class="content">{{ .Content }}</div>
       </article>
     </div>
