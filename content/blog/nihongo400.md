@@ -1,6 +1,9 @@
 ---
 title: "400 Days of Learning Japanese"
 date: 2023-03-31T10:06:39-06:00
+tags:
+  - Language learning
+  - Japanese
 ---
 
 It has been around 400 days since I got started on the journey to become jozu, I've learned a lot of Japanese, and also learned a lot about learning to learn Japanese. Stick around and maybe you'll misinterpret my advice and come up with something that's actually useful.

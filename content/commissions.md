@@ -1,6 +1,7 @@
 ---
 title: "Commissions"
 date: 2023-03-31T09:32:11-06:00
+clean: true
 ---
 
 ![commSheet](/commSheet.png)

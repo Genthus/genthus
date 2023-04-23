@@ -1,6 +1,7 @@
 ---
 title: "Terms of Service"
 date: 2023-03-31T09:32:11-06:00
+clean: true
 ---
 
 - The payment is done up front, after the draft is approved and before the artwork is made.

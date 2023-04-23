@@ -4,9 +4,37 @@
     class="flex flex-col gap-4 w-full h-auto m-auto p-8 justify-center items-center bg-white text-black"
   >
     <h1 id="title" class="text-4xl sm:text-6xl font-bold">{{ .Title }}</h1>
-    <div class="text-center">
+    <div class="flex flex-col gap-2 text-center">
+      {{ with .Param "clean" }} {{ else }}
       <h4 id="date">{{ .Date.Format "Mon Jan 2 , 2006" }}</h4>
-      <h5 id="wordcount">{{ .WordCount }} Words</h5>
+      <!-- <h5 id="wordcount">{{ .WordCount }} Words</h5> -->
+      <div>
+        {{ with .GetTerms "topics" }}
+        <div class="m-auto">
+          <ul id="topics" class="flex gap-4 text-white">
+            {{ range . }}
+            <li>
+              <a href="{{ .RelPermalink }}" class="bg-blue-700 p-2"
+                >{{ .LinkTitle }}</a
+              >
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }} {{ with .GetTerms "tags" }}
+        <div class="m-auto">
+          <ul id="tags" class="flex gap-4 text-white">
+            {{ range . }}
+            <li>
+              <a href="{{ .RelPermalink }}" class="bg-blue-700 p-2"
+                >{{ .LinkTitle }}</a
+              >
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }} {{ end }}
+      </div>
     </div>
   </div>
   <div>
@@ -17,28 +45,18 @@
     </div>
   </div>
 </section>
-<aside id="meta" class="flex justify-between m-auto p-2 bg-gray-950">
-  <div>
-    {{ with .GetTerms "topics" }}
-    <ul id="topics">
-      {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-      {{ end }}
-    </ul>
-    {{ end }} {{ with .GetTerms "tags" }}
-    <ul id="tags">
-      {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-      {{ end }}
-    </ul>
-    {{ end }}
-  </div>
-  <div>
+<aside
+  id="meta"
+  class="w-full flex flex-col m-auto items-center p-2 gap-4 bg-gray-950"
+>
+  {{ with .Param "clean" }} {{ else }} {{ partial "footer.html" . }}
+  <div class="w-2/4 flex justify-between">
     {{ with .PrevInSection }}
-    <a class="previous" href="{{ .Permalink }}"> {{ .Title }}</a>
+    <a class="bg-pink-500 p-1" href="{{ .Permalink }}"> {{ .Title }}</a>
     {{ end }} {{ with .NextInSection }}
-    <a class="next" href="{{ .Permalink }}"> {{ .Title }}</a>
+    <a class="bg-blue-700 p-1" href="{{ .Permalink }}"> {{ .Title }}</a>
     {{ end }}
   </div>
+  {{ end }}
 </aside>
-{{ end }}
+{{ partial "footer.html" . }} {{ end }}
