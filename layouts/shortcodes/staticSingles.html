@@ -1,0 +1,10 @@
+<div>
+  <ul class="list-none text-lg">
+    {{ range .Site.Taxonomies.categories.static }}
+    <li>
+      <a class="p-2" href="{{ .Page.Permalink }}"> {{ .Page.Title }} </a>
+      {{ .Page.Description }}
+    </li>
+    {{ end }}
+  </ul>
+</div>

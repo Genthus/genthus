@@ -1,6 +1,7 @@
 ---
 title: "400 Days of Learning Japanese"
 date: 2023-03-31T10:06:39-06:00
+comments: true
 tags:
   - Language learning
   - Japanese
