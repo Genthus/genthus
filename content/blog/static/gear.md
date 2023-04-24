@@ -24,3 +24,14 @@ categories:
 - MidiFighter 3D
   > Got this used from somewhere and its just a MIDI device with a lot of buttons.
   > Instead of buying something expensive like a tourbox or a drawing controller, look out for used MIDI controllers and get something like MidiKey2Key to set up your hotkeys for drawing.
+
+## Audio
+
+- Headphones: Fostex T50RP (Mayflower mod)
+- IEM: 7HZ Salnotes Zero
+
+## Gaming
+
+- Controllers:
+  - DualShock 5
+  - MadCatz TES+ Fight Stick
