@@ -16,3 +16,4 @@ I made this website after struggling to find a place in the different social med
 
 - HUGO
 - Tailwind 3
+- Github Pages

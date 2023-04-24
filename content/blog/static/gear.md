@@ -5,7 +5,6 @@ description: "The physical stuff I use"
 clean: false
 categories:
   - static
-tags:
 ---
 
 # PC
