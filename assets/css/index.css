@@ -549,6 +549,10 @@ html {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-auto {
   height: auto;
 }

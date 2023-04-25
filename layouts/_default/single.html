@@ -16,6 +16,7 @@
   <div>
     <div class="w-5/6 mx-auto bg-white">
       <article id="content" class="sm:w-4/6 m-auto p-2 pb-8 px-8 bg-zinc-800">
+        <h1 id="title" class="text-4xl sm:text-6xl font-bold hidden">{{ .Title }}</h1>
         <div class="content">{{ .Content }}</div>
       </article>
       <!-- {{ with .Param "comments" }} -->
