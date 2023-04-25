@@ -8,32 +8,8 @@
       {{ with .Param "clean" }} {{ else }}
       <h4 id="date">{{ .Date.Format "Mon Jan 2 , 2006" }}</h4>
       <!-- <h5 id="wordcount">{{ .WordCount }} Words</h5> -->
-      <div>
-        {{ with .GetTerms "topics" }}
-        <div class="m-auto">
-          <ul id="topics" class="flex gap-4 text-white">
-            {{ range . }}
-            <li>
-              <a href="{{ .RelPermalink }}" class="bg-blue-700 p-2"
-                >{{ .LinkTitle }}</a
-              >
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-        {{ end }} {{ with .GetTerms "tags" }}
-        <div class="m-auto">
-          <ul id="tags" class="flex gap-4 text-white">
-            {{ range . }}
-            <li>
-              <a href="{{ .RelPermalink }}" class="bg-blue-700 p-2"
-                >{{ .LinkTitle }}</a
-              >
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-        {{ end }} {{ end }}
+        {{ partial "singleTaglist.html" . }}
+        {{ end }}
       </div>
     </div>
   </div>

@@ -1,0 +1,27 @@
+<div>
+  {{ with .GetTerms "topics" }}
+  <div class="m-auto">
+    <ul id="topics" class="flex justify-center gap-4 text-white">
+      {{ range . }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="bg-blue-700 p-2"
+          >{{ .LinkTitle }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }} {{ with .GetTerms "tags" }}
+  <div class="m-auto">
+    <ul id="tags" class="flex justify-center gap-4 text-white">
+      {{ range . }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="bg-blue-700 p-2"
+          >{{ .LinkTitle }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</div>

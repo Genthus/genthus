@@ -30,7 +30,10 @@
       "script",
       "section",
       "strong",
+      "table",
+      "td",
       "title",
+      "tr",
       "ul"
     ],
     "classes": [
@@ -67,6 +70,7 @@
       "h-auto",
       "h-full",
       "h-screen",
+      "highlight",
       "hover:bg-pink-500",
       "items-center",
       "justify-around",
@@ -162,7 +166,8 @@
       "terms-of-service",
       "this-is-a-header",
       "title",
-      "tools-ive-used"
+      "tools-ive-used",
+      "yomichan-custom-css"
     ]
   }
 }

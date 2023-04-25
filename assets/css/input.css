@@ -45,6 +45,9 @@
 .content p {
   @apply my-4;
 }
+.highlight {
+  @apply bg-gray-800 p-2 rounded;
+}
 .content pre {
   @apply bg-gray-800 px-2 rounded;
 }
