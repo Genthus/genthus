@@ -1,7 +1,6 @@
 ---
 title: "My Yomichan Settings"
 date: 2023-04-24T20:43:41-06:00
-draft: true
 clean: false
 comments: true
 tags:
