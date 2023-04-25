@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section id="main" class="bg-gradient-to-b from-blue-700 to-pink-500">
+<main id="main" class="bg-gradient-to-b from-blue-700 to-pink-500">
   <div
     class="flex flex-col gap-4 w-full h-auto m-auto p-8 justify-center items-center bg-white text-black"
   >
@@ -8,16 +8,15 @@
       {{ with .Param "clean" }} {{ else }}
       <h4 id="date">{{ .Date.Format "Mon Jan 2 , 2006" }}</h4>
       <!-- <h5 id="wordcount">{{ .WordCount }} Words</h5> -->
-        {{ partial "singleTaglist.html" . }}
-        {{ end }}
-      </div>
+      {{ partial "singleTaglist.html" . }} {{ end }}
     </div>
   </div>
   <div>
     <div class="w-5/6 mx-auto bg-white">
-      <article id="content" class="sm:w-4/6 m-auto p-2 pb-8 px-8 bg-zinc-800">
-        <h1 id="title" class="text-4xl sm:text-6xl font-bold hidden">{{ .Title }}</h1>
-        <div class="content">{{ .Content }}</div>
+      <article id="pandoc">
+        <div class="sm:w-4/6 m-auto p-2 pb-8 px-8 bg-zinc-800">
+          <div class="content">{{ .Content }}</div>
+        </div>
       </article>
       <!-- {{ with .Param "comments" }} -->
       <!-- <div class="sm:w-4/6 m-auto mt-10 p-8 px-8 bg-gray-950"> -->
@@ -26,7 +25,7 @@
       <!-- {{ end }} -->
     </div>
   </div>
-</section>
+</main>
 <aside
   id="meta"
   class="w-full flex flex-col m-auto items-center p-2 gap-4 bg-gray-950"
@@ -34,9 +33,13 @@
   {{ with .Param "clean" }} {{ else }}
   <div class="w-2/4 flex justify-between">
     {{ with .PrevInSection }}
-    <a class="bg-pink-500 p-1" href="{{ .Permalink }}"> {{ .Title }}</a>
+    <a class="bg-pink-500 p-2 text-lg" href="{{ .Permalink }}"
+      >Previous: {{ .Title }}</a
+    >
     {{ end }} {{ with .NextInSection }}
-    <a class="bg-blue-700 p-1" href="{{ .Permalink }}"> {{ .Title }}</a>
+    <a class="bg-blue-700 p-2 text-lg" href="{{ .Permalink }}"
+      >Next: {{ .Title }}</a
+    >
     {{ end }}
   </div>
   {{ end }}

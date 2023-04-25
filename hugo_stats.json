@@ -84,6 +84,7 @@
       "m-4",
       "m-auto",
       "md:flex",
+      "mt-10",
       "mx-auto",
       "p-1",
       "p-2",
@@ -123,6 +124,7 @@
       "xl:w-auto"
     ],
     "ids": [
+      "",
       "1-contact",
       "2-drafting",
       "3-payment",
@@ -135,6 +137,7 @@
       "blockquotes",
       "code",
       "code-blocks",
+      "comment-section",
       "content",
       "current-interests",
       "date",
@@ -152,6 +155,7 @@
       "markdown-syntax",
       "meta",
       "overview",
+      "pandoc",
       "paragraphs-and-line-breaks",
       "pastintermitent-interests",
       "pc",
@@ -167,6 +171,7 @@
       "terms-of-service",
       "this-is-a-header",
       "title",
+      "title-h1",
       "tools-ive-used",
       "yomichan-custom-css"
     ]
