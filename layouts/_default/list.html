@@ -5,31 +5,31 @@
             class="flex flex-col gap-4 w-full h-auto m-auto p-8 justify-center items-center bg-white text-black"
         >
             <h1 id="title" class="text-4xl sm:text-6xl font-bold">{{ .Title }}</h1>
-    <div class="w-5/6 mx-auto bg-white">
-      <article id="content" class="sm:w-4/6 m-auto p-2 pb-8 px-8 bg-zinc-800">
-        <div class="content">{{ .Content }}</div>
-      </article>
-    </div>
+            <div class="w-5/6 mx-auto bg-white">
+                <article id="content" class="sm:w-4/6 m-auto p-2 pb-8 px-8 bg-zinc-800">
+                    <div class="content">{{ .Content }}</div>
+                </article>
+            </div>
             {{ partial "taglist.html" . }}
 
-    </div>
+        </div>
         <div
             class="w-5/6 mx-auto bg-white flex flex-col gap-4 m-auto p-8 justify-center items-center bg-white text-black"
         >
             <h1 class="text-3xl sm:text-4xl font-bold">Articles</h1>
             <ul class="container-md m-auto sm:w-3/6 p-2 sm:px-16 bg-gray-950">
-            {{ range .Pages }}
-            <li class="m-auto w-full p-1">
-                <a href="{{ .Permalink }}" class="flex bg-white p-1 transition duration-150 hover:bg-pink-500">
-                    <div class="grow flex justify-between gap-4 p-1 items-center">
-                        <label class="text-lg font-bold">{{ .Title }}</label> 
-                        <label class="border-blue-700">{{ .Date.Format "2006-01-02" }}</label>
-                    </div>
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-            
+                {{ range .Pages }}
+                <li class="m-auto w-full p-1">
+                    <a href="{{ .Permalink }}" class="flex bg-white p-1 transition duration-150 hover:bg-pink-500">
+                        <div class="grow flex justify-between gap-4 p-1 items-center">
+                            <label class="text-lg font-bold">{{ .Title }}</label> 
+                            <label class="border-blue-700">{{ .Date.Format "2006-01-02" }}</label>
+                        </div>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+
         </div>
         {{ partial "footer.html" . }}
 </main>
