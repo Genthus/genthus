@@ -1,6 +1,7 @@
 <html>
     {{ partial "head.html" }}
     <body class="h-screen w-screen flex flex-col text-white bg-blue-700 gap-4">
+        {{ partial "contentBlock.html" .}}
         {{ if not .IsHome }}
         <nav class="bg-gray-950">
             <div class="md:flex w-full items-center justify-around">

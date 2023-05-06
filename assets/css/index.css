@@ -524,6 +524,22 @@ html {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -547,6 +563,10 @@ html {
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-auto {
@@ -646,12 +666,16 @@ html {
   place-self: center;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .border-2 {
   border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-8 {
+  border-width: 8px;
 }
 
 .border-y-4 {
@@ -707,11 +731,6 @@ html {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
-.bg-gray-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -741,26 +760,6 @@ html {
   --tw-gradient-to-position:  ;
 }
 
-.to-gray-950 {
-  --tw-gradient-to: #030712 var(--tw-gradient-to-position);
-  --tw-gradient-to-position:  ;
-}
-
-.to-pink-500 {
-  --tw-gradient-to: #ec4899 var(--tw-gradient-to-position);
-  --tw-gradient-to-position:  ;
-}
-
-.to-gray-800 {
-  --tw-gradient-to: #1f2937 var(--tw-gradient-to-position);
-  --tw-gradient-to-position:  ;
-}
-
-.to-gray-900 {
-  --tw-gradient-to: #111827 var(--tw-gradient-to-position);
-  --tw-gradient-to-position:  ;
-}
-
 .to-blue-950 {
   --tw-gradient-to: #172554 var(--tw-gradient-to-position);
   --tw-gradient-to-position:  ;
@@ -768,6 +767,10 @@ html {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-16 {
+  padding: 4rem;
 }
 
 .p-2 {
@@ -888,7 +891,6 @@ html {
 /* Article CSS */
 
 .content {
-  text-align: justify;
   font-size: 1.1rem;
   line-height: 2;
   --tw-text-opacity: 1;
@@ -1067,10 +1069,6 @@ html {
     width: 50%;
   }
 
-  .lg\:w-2\/6 {
-    width: 33.333333%;
-  }
-
   .lg\:gap-16 {
     gap: 4rem;
   }
@@ -1086,8 +1084,12 @@ html {
     width: auto;
   }
 
-  .xl\:w-2\/6 {
-    width: 33.333333%;
+  .xl\:w-1\/4 {
+    width: 25%;
+  }
+
+  .xl\:w-2\/4 {
+    width: 50%;
   }
 
   .xl\:grow {
