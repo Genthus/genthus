@@ -83,6 +83,7 @@
       "h-auto",
       "h-full",
       "h-screen",
+      "hidden",
       "highlight",
       "hover:bg-pink-500",
       "items-center",
