@@ -10,7 +10,7 @@
 }
 /* Article CSS */
 .content {
-  @apply leading-loose text-justify text-slate-100 text-[1.1rem];
+  @apply leading-loose text-slate-100 text-[1.1rem];
 }
 .content h1 {
   @apply text-4xl my-8 font-bold;
