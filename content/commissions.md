@@ -9,7 +9,8 @@ clean: true
 # Pricing
 {{< commissionPrices >}}
 
-If your request isn't contemplated in this form or you have any questions, feel free to DM/email me on social media or at [commissions@genthus.art](mailto:commissions@genthus.art)
+If your request isn't contemplated in this form or you have any questions, feel free to 
+email me on discord (genthus) or at [commissions@genthus.art](mailto:commissions@genthus.art)
 
 # Off limits
 
