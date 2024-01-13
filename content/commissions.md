@@ -10,7 +10,7 @@ clean: true
 {{< commissionPrices >}}
 
 If your request isn't contemplated in this form or you have any questions, feel free to 
-email me on discord (genthus) or at [commissions@genthus.art](mailto:commissions@genthus.art)
+email me or contact me on discord (genthus) or at [commissions@genthus.art](mailto:commissions@genthus.art)
 
 # Off limits
 
