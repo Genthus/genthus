@@ -1,0 +1,240 @@
+<html>
+    <head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  <title>  </title>
+  
+  <link rel="stylesheet" type="text/css" href="http://genthus.art/css/index.css" />
+</head>
+
+    <body class="h-screen w-screen flex flex-col text-white bg-blue-700 gap-4">
+        <div id="consent" class="w-full h-full fixed bg-gray-950 flex items-center justify-center border-8 border-blue-700 z-40 hidden">
+    <div class="xl:w-2/4 flex flex-col text-center gap-8 border-4 border-blue-700 p-16">
+        <h1 class="text-3xl">Warning</h1>
+        <h2 class="text-xl">This website contains images not suited for those underage and in workplace environments</h2>
+        <div class="flex flex-col gap-8">
+            <button class="p-4 bg-blue-700 hover:bg-pink-500 text-xl" onclick="saveConsent()">Continue to genthus.art</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function saveConsent() {
+    console.log("hi")
+    let d = new Date()
+    d.setTime(d.getTime() + (28*24*60*60*1000))
+    document.cookie = "consent=true; path=/; SameSite=Lax; Secure; expires=" + d.toUTCString()
+    document.getElementById("consent").classList.add("hidden")
+}
+window.onload = () => {
+    let x = document.cookie;
+    if (!x.includes("consent=true")) {
+        document.getElementById("consent").classList.remove("hidden")
+    }
+}
+</script>
+
+        
+        <nav class="bg-gray-950">
+            <div class="md:flex w-full items-center justify-around">
+                <a
+                    href="http://genthus.art/"
+                    class="w-96 text-4xl bg-blue-700 p-4 text-white font-bold justify-center transition duration-150 hover:bg-pink-500"
+                >
+                    Genthus</a
+                >
+                <div class="flex justify-right text-xl gap-8">
+                    
+                    <a
+                        href="http://genthus.art/blog/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >Blog</a
+                    >
+                    
+                    <a
+                        href="http://genthus.art/commissions/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >Commissions</a
+                    >
+                    
+                    <a
+                        href="http://genthus.art/about/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >About</a
+                    >
+                    
+                </div>
+            </div>
+        </nav>
+        
+        <main class="grow">
+            <article class="">
+                
+<main id="main" class="bg-gradient-to-b from-blue-700 to-blue-950">
+    <div
+        class="flex flex-col gap-4 w-full h-auto m-auto p-8 justify-center items-center bg-white text-black">
+        <h1 id="title" class="text-4xl sm:text-6xl font-bold">Commissions</h1>
+        <div class="flex flex-col gap-2 text-center">
+             
+        </div>
+    </div>
+    <div>
+        <div class="w-5/6 mx-auto bg-gray-950">
+            <article id="pandoc">
+                <div class="sm:w-4/6 lg:w-3/6 2xl:w-5/12 m-auto p-2 pb-8 px-8 bg-zinc-800 lg:text-lg xl:text-xl">
+                    <div class="content"><!-- raw HTML omitted -->
+<h1 id="pricing">Pricing</h1>
+<div class="flex flex-col m-auto justify-center gap-8">
+    <div class="m-auto flex flex-col justify-center bg-gradient-to-br from-blue-700  to-blue-900 drop-shadow-xl px-12">
+        <ul class="list-none justify-center p-2 text-xs md:text-base">
+            <li class="flex flex-row items-center text-center border-b-4 border-blue-700">
+                <h3 class="flex-1">Color Sketch</h3>
+                <h3 class="flex-1">$50 USD</h3>
+            </li>
+            <li class="flex flex-row content-center text-center border-b-4 border-blue-700">
+                <h3 class="flex-1">Bust</h3>
+                <h3 class="flex-1">$90</h3>
+            </li>
+            <li class="flex flex-row content-center text-center border-b-4 border-blue-700">
+                <h3 class="flex-1">Half-Body</h3>
+                <h3 class="flex-1">$160</h3>
+            </li>
+            <li class="flex flex-row content-center text-center">
+                <h3 class="flex-1">Full-Body</h3>
+                <h3 class="flex-1">$200</h3>
+            </li>
+        </ul>
+    </div>
+    <div class="m-auto flex flex-col justify-center bg-gradient-to-br from-blue-800  to-blue-900 drop-shadow-xl px-4">
+        <ul class="list-none justify-center p-2 text-xs md:text-base">
+            <li class="flex flex-row items-center text-center border-b-4 border-blue-700">
+                <h4 class="flex-1">Extra character</h4>
+                <h4 class="flex-1">+$40-90</h4>
+            </li>
+            <li class="flex flex-row content-center text-center border-b-4 border-blue-700">
+                <h4 class="flex-1">Background</h4>
+                <h4 class="flex-1">+$40-80</h4>
+            </li>
+            <li class="flex flex-row content-center text-center border-b-4 border-blue-700">
+                <h4 class="flex-1">NSFW*</h4>
+                <h4 class="flex-1">+$50-100</h4>
+            </li>
+            <li class="flex flex-row content-center text-center border-b-4 border-blue-700">
+                <h4 class="flex-1">Variation</h4>
+                <h4 class="flex-1">+$25 each</h4>
+            </li>
+            <li class="flex flex-row content-center text-center">
+                <h4 class="flex-1">Commercial use</h4>
+                <h4 class="flex-1">+50%**</h4>
+            </li>
+        </ul>
+    </div>
+    <ul class="text-gray-400 text-base">
+        <li class="list-none">* Faceless characters/bodies do not count towards extra characters in NSFW requests</li>
+        <li class="list-none">** Rate for independent creators</li>
+    </ul>
+</div>
+
+<p>If your request isn&rsquo;t contemplated in this form or you have any questions, feel free to
+email me or contact me on discord (genthus) or at <a href="mailto:commissions@genthus.art">commissions@genthus.art</a></p>
+<h1 id="off-limits">Off limits</h1>
+<ul>
+<li>Heavy Gore / Guro / Cruelty / Violence</li>
+</ul>
+<h1 id="process">Process</h1>
+<h3 id="1-contact">1. Contact</h3>
+<blockquote>
+<p>Send your request through this form or by contacting me on social media.</p>
+</blockquote>
+<h3 id="2-drafting">2. Drafting</h3>
+<blockquote>
+<p>Once I’ve received your request, I&rsquo;ll work out a very rough draft and contact you for approval so I can start working on the piece. Revisions to this draft can be made but if an excessive amount of revisions are made I will charge for the time spent (Up to 5$ USD).</p>
+</blockquote>
+<h3 id="3-payment">3. Payment</h3>
+<blockquote>
+<p>Once the draft has your approval, I will invoice the PayPal you&rsquo;ll be using for payment. Any payment made before this step will be refunded. Once the amount has been paid, I&rsquo;ll start working on the piece.</p>
+</blockquote>
+<h3 id="4-drawing">4. Drawing</h3>
+<blockquote>
+<p>While working on the piece I will provide occasional updates. Small adjustments can be requested, however I will decide whether to accept them or not. Major changes will not be tolerated. I may contact you for clarification on your character if you requested an OC.</p>
+</blockquote>
+<h3 id="5-delivery">5. Delivery</h3>
+<blockquote>
+<p>Once the piece is finished, I will deliver the finished image. Color-correction and basic editing of the image can be requested. No refunds will be made after the piece has been finished and delivered.</p>
+</blockquote>
+<h1 id="request-form">Request Form</h1>
+<div class="flex justify-center">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScq5IsHstLPbbPM8Nhnh9Yh1DU3mAx3rzI7007lRyR1NuoQPg/viewform?embedded=true" 
+        width="700" 
+        height="1900" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">Loading…</iframe>
+</div>
+
+<h2 id="terms-of-service">Terms of Service</h2>
+<blockquote>
+<ul>
+<li>The payment is done up front, after the draft is approved and before the artwork is made.</li>
+<li>I hold the right to deny any request for any reason.</li>
+<li>If at any point I am unwilling/unable to finish a piece for any reason, I will refund the amount paid.</li>
+<li>Any attempt to scam will lead to being blocked &amp; blacklisted.</li>
+<li>I retain the right to post and showcase the commissioned piece.</li>
+<li>Unauthorized reselling of any commissioned piece is forbidden.</li>
+<li>Where appropriate, the Illustrator must be credited at all times.</li>
+<li>You may ask for a private commission if you want to keep your commission information private, this will have an additional fee.</li>
+<li>Terms specific to personal use:
+<ul>
+<li>The commission may be used for non-commercial purposes, provided credit is given.</li>
+</ul>
+</li>
+<li>For commercial use:</li>
+<li>If the commission will be used for commercial purposes, I must be notified of and have agreed to it before starting the piece.</li>
+<li>Commercial use commissions will be subject to a price increase on a case by case basis.</li>
+<li>Transfer of the commercial rights will be discussed with the client.</li>
+<li>All rights reserved by artist.</li>
+</ul>
+</blockquote>
+</div>
+                </div>
+            </article>
+            
+        </div>
+    </div>
+</main>
+<aside
+    id="meta"
+    class="w-full flex flex-col m-auto items-center p-2 gap-4 bg-gray-950">
+     
+</aside>
+<footer>
+  <div class="flex justify-center m-auto p-2 text-xl gap-8 text-white bg-blue-700">
+    <a href="http://genthus.art/" class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700">Home</a>
+          
+          <a
+            href="http://genthus.art/blog/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >Blog</a
+          >
+          
+          <a
+            href="http://genthus.art/commissions/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >Commissions</a
+          >
+          
+          <a
+            href="http://genthus.art/about/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >About</a
+          >
+          
+</footer>
+  </article>
+        </main>
+    </body>
+</html>

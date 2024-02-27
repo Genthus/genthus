@@ -1,0 +1,408 @@
+<html>
+    <head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  <title>  </title>
+  
+  <link rel="stylesheet" type="text/css" href="http://genthus.art/css/index.css" />
+</head>
+
+    <body class="h-screen w-screen flex flex-col text-white bg-blue-700 gap-4">
+        <div id="consent" class="w-full h-full fixed bg-gray-950 flex items-center justify-center border-8 border-blue-700 z-40 hidden">
+    <div class="xl:w-2/4 flex flex-col text-center gap-8 border-4 border-blue-700 p-16">
+        <h1 class="text-3xl">Warning</h1>
+        <h2 class="text-xl">This website contains images not suited for those underage and in workplace environments</h2>
+        <div class="flex flex-col gap-8">
+            <button class="p-4 bg-blue-700 hover:bg-pink-500 text-xl" onclick="saveConsent()">Continue to genthus.art</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function saveConsent() {
+    console.log("hi")
+    let d = new Date()
+    d.setTime(d.getTime() + (28*24*60*60*1000))
+    document.cookie = "consent=true; path=/; SameSite=Lax; Secure; expires=" + d.toUTCString()
+    document.getElementById("consent").classList.add("hidden")
+}
+window.onload = () => {
+    let x = document.cookie;
+    if (!x.includes("consent=true")) {
+        document.getElementById("consent").classList.remove("hidden")
+    }
+}
+</script>
+
+        
+        <nav class="bg-gray-950">
+            <div class="md:flex w-full items-center justify-around">
+                <a
+                    href="http://genthus.art/"
+                    class="w-96 text-4xl bg-blue-700 p-4 text-white font-bold justify-center transition duration-150 hover:bg-pink-500"
+                >
+                    Genthus</a
+                >
+                <div class="flex justify-right text-xl gap-8">
+                    
+                    <a
+                        href="http://genthus.art/blog/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >Blog</a
+                    >
+                    
+                    <a
+                        href="http://genthus.art/commissions/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >Commissions</a
+                    >
+                    
+                    <a
+                        href="http://genthus.art/about/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >About</a
+                    >
+                    
+                </div>
+            </div>
+        </nav>
+        
+        <main class="grow">
+            <article class="">
+                
+<main id="main" class="bg-gradient-to-b from-blue-700 to-blue-950">
+    <div
+        class="flex flex-col gap-4 w-full h-auto m-auto p-8 justify-center items-center bg-white text-black">
+        <h1 id="title" class="text-4xl sm:text-6xl font-bold">My Yomichan Settings</h1>
+        <div class="flex flex-col gap-2 text-center">
+            
+            <h4 id="date">Mon Apr 24 , 2023</h4>
+            
+            <div>
+   
+  <div class="m-auto">
+    <ul id="tags" class="flex justify-center gap-4 text-white">
+      
+      <li>
+        <a href="/tags/japanese/" class="bg-blue-700 p-2"
+          >Japanese</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+  
+</div>
+ 
+        </div>
+    </div>
+    <div>
+        <div class="w-5/6 mx-auto bg-gray-950">
+            <article id="pandoc">
+                <div class="sm:w-4/6 lg:w-3/6 2xl:w-5/12 m-auto p-2 pb-8 px-8 bg-zinc-800 lg:text-lg xl:text-xl">
+                    <div class="content"><h1 id="yomichan-custom-css">Yomichan Custom CSS</h1>
+<p><img src="./yomiScreen.png" alt="yomichan screenshot"></p>
+<p>If you want to have your Yomichan/Yomitan look cool like mine copy the code below and add it in Configure Custom CSS -&gt; Popup CSS in the settings page.</p>
+<div class="highlight"><div style="color:#c9c9c9color: #282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;color:#c9c9c9"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;color:#c9c9c9">
+<pre tabindex="0" style="color:#c9c9c9color: #282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">  9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 86
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 87
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 88
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 89
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 90
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 91
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 92
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 93
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 94
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 95
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 96
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 97
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 98
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599"> 99
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">100
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">101
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">102
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">103
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">104
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">105
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">106
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">107
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">108
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">109
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">110
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">111
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">112
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">113
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">114
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">115
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">116
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">117
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">118
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">119
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">120
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#939599">121
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;color:#c9c9c9;width:100%">
+<pre tabindex="0" style="color:#c9c9c9color: #282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">gloss-content</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-family</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Yu</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Mincho</span><span style="color:#56b6c2">,</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">SimSun</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-weight</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">900</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-size</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">19</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">line-height</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">1.4</span><span style="color:#57c7ff;font-weight:bold">em</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">tag-label-content</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-family</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Yu</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Mincho</span><span style="color:#56b6c2">,</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Microsoft</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">YaHei</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-weight</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">400</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-size</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">15</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">kanji-gloss-content</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-family</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Yu</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Mincho</span><span style="color:#56b6c2">,</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">SimSun</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-weight</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">600</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-size</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">16</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">kanji-glpyh</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-family</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">kanji-stroke-orders</span><span style="color:#56b6c2">,</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">sans-serif</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-size</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">8.5</span><span style="color:#57c7ff;font-weight:bold">em</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">headword</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-family</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Yu</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">Mincho</span><span style="color:#56b6c2">,</span><span style="color:#c9c9c9"> </span><span style="color:#c9c9c9">SimSun</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-weight</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">900</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">font-size</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">19</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">!important</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#bc74c4">body</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">background</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#282c34</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#dcdfe4</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">:</span><span style="color:#ecbe7b">root</span><span style="color:#bc74c4">[</span><span style="color:#bc74c4">data-theme</span><span style="color:#bc74c4">=</span><span style="color:#82cc6a">&#34;dark&#34;</span><span style="color:#bc74c4">]</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-border-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">transparent</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-default-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#88C0D0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-name-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#88C0D0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-expression-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#88C0D0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-popular-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#88C0D0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-frequent-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#88C0D0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-archaism-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#88C0D0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-dictionary-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#4d99ee</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-frequency-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#56b6c2</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-part-of-speech-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#88C0D0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-search-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#88C0D0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--tag-pitch-accent-dictionary-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#5E81AC</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--accent-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#e5c07b</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--pitch-accent-annotation-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#dcdfe4</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--input-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#3B4252</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--reason-text-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#61aff0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--notification-text-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#ebffff</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--notification-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#3B4252</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--progress-bar-track-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#D8DEE9</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--light-border-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#E5E9F0</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#2E3440</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">transparent</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-background-color-hover</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#81A1C1</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-background-color-active</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#6d88a3</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-danger-background-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">transparent</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-danger-background-color-hover</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#BF616A</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-danger-background-color-active</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#8a373f</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-icon-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#ebffff</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-disabled-icon-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#808c8c</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#bc74c4;font-style:italic">--sidebar-button-danger-icon-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#ebffff</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">headword-term</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">background</span><span style="color:#56b6c2">:</span><span style="color:#57c7ff">#e06c75</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">padding</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">0</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">10</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">margin</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">auto</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">border-radius</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">3</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">headword-kanji-link</span><span style="color:#bc74c4">,</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">headword-term</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#f6f8ff</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">text-shadow</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">2</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">2</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">0</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#282c34</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">tag-label-content</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#061b36</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">frequency-group-list</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">display</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">flex</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">justify-content</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">right</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">pronunciation-group-tag-list</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">display</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">none</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">pronunciation-graph</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">margin</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">15</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">margin-left</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">40</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">transform</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#7fbaf5">scale</span><span style="color:#56b6c2">(</span><span style="color:#56b6c2">1.5</span><span style="color:#56b6c2">);</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">definition-tag-list</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">display</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">flex</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">justify-content</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">right</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">border-top</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">solid</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">1</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">border-color</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#4d99ee</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">entry-header</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">margin-left</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">2</span><span style="color:#57c7ff;font-weight:bold">em</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">definition-item</span><span style="color:#56b6c2">:</span><span style="color:#ecbe7b">nth-child</span><span style="color:#bc74c4">(</span><span style="color:#bc74c4">odd</span><span style="color:#bc74c4">)</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">background</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#57c7ff">#1f242d</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">definition-list</span><span style="color:#bc74c4">,</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">pronunciation-list</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">list-style</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#cf5967;background-color:#43454f">none</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">.</span><span style="color:#ecbe7b">gloss-content</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">{</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">        </span><span style="color:#7fbaf5">padding</span><span style="color:#56b6c2">:</span><span style="color:#c9c9c9"> </span><span style="color:#56b6c2">2</span><span style="color:#57c7ff;font-weight:bold">px</span><span style="color:#56b6c2">;</span><span style="color:#c9c9c9">
+</span></span></span><span style="display:flex;color:#c9c9c9"><span style="color:#c9c9c9"><span style="color:#c9c9c9">    </span><span style="color:#56b6c2">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</div>
+                </div>
+            </article>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</main>
+<aside
+    id="meta"
+    class="w-full flex flex-col m-auto items-center p-2 gap-4 bg-gray-950">
+    
+    <div class="w-2/4 flex justify-between">
+        
+        <a class="bg-pink-500 p-2 text-lg" href="http://genthus.art/blog/static/gear/"
+        >Previous: Gear</a
+        >
+         
+    </div>
+    
+</aside>
+<footer>
+  <div class="flex justify-center m-auto p-2 text-xl gap-8 text-white bg-blue-700">
+    <a href="http://genthus.art/" class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700">Home</a>
+          
+          <a
+            href="http://genthus.art/blog/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >Blog</a
+          >
+          
+          <a
+            href="http://genthus.art/commissions/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >Commissions</a
+          >
+          
+          <a
+            href="http://genthus.art/about/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >About</a
+          >
+          
+</footer>
+  </article>
+        </main>
+    </body>
+</html>

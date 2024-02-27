@@ -1,0 +1,302 @@
+<html>
+    <head>
+	<meta name="generator" content="Hugo 0.111.3">
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  <title>  </title>
+  
+  <link rel="stylesheet" type="text/css" href="http://genthus.art/css/index.css" />
+</head>
+
+    <body class="h-screen w-screen flex flex-col text-white bg-blue-700 gap-4">
+        <div id="consent" class="w-full h-full fixed bg-gray-950 flex items-center justify-center border-8 border-blue-700 z-40 hidden">
+    <div class="xl:w-2/4 flex flex-col text-center gap-8 border-4 border-blue-700 p-16">
+        <h1 class="text-3xl">Warning</h1>
+        <h2 class="text-xl">This website contains images not suited for those underage and in workplace environments</h2>
+        <div class="flex flex-col gap-8">
+            <button class="p-4 bg-blue-700 hover:bg-pink-500 text-xl" onclick="saveConsent()">Continue to genthus.art</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function saveConsent() {
+    console.log("hi")
+    let d = new Date()
+    d.setTime(d.getTime() + (28*24*60*60*1000))
+    document.cookie = "consent=true; path=/; SameSite=Lax; Secure; expires=" + d.toUTCString()
+    document.getElementById("consent").classList.add("hidden")
+}
+window.onload = () => {
+    let x = document.cookie;
+    if (!x.includes("consent=true")) {
+        document.getElementById("consent").classList.remove("hidden")
+    }
+}
+</script>
+
+        
+        <main class="grow">
+            <article class="">
+                
+<article>
+    <div class="h-full sm:flex">
+        <div
+            class="m-auto w-full 2xl:w-2/6 flex flex-col gap-4 lg:gap-16 bg-blue-700 p-4 text-white"
+        >
+            <h2 class="basis-1/8 m-auto p-4 text-2xl font-syne">
+                Hi I'm Genthus, this is my portfolio/blog, I'm an aspiring illustrator
+                and also do programming and language learning.
+            </h2>
+            <div class="m-auto w-full flex flex-col text-2xl gap-2">
+                <a
+                    href="/commissions"
+                    class="m-auto bg-gray-950 p-4 w-full border-2 border-white text-white transition duration-150 hover:bg-pink-500"
+                >Commissions</a
+                >
+                <a
+                    href="/blog"
+                    class="m-auto bg-gray-950 p-4 w-full border-2 border-white text-white transition duration-150 hover:bg-pink-500"
+                >Blog</a
+                >
+                <a
+                    href="/about"
+                    class="m-auto bg-gray-950 p-4 w-full border-2 border-white text-white transition duration-150 hover:bg-pink-500"
+                >About</a
+                >
+            </div>
+            <ul class="basis-3/6 m-auto w-5/6 flex flex-col gap-2">
+                <li>
+                    <a
+                        href="https://patreon.com/genthus"
+                        class="flex justify-between p-4 pr-8 transition duration-150 bg-gray-950 hover:bg-pink-500"
+                    >
+                         
+                        <img
+                            src="/images/patreon_hu12aabba82359977f9e0685fb000718f6_52210_40x30_fit_box_3.png"
+                            width="30"
+                            height="30"
+                        />
+                        
+                        <label class="text-xl"> Patreon </label>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://twitter.com/genthus_"
+                        class="flex justify-between p-4 pr-8 transition duration-150 bg-gray-950 hover:bg-pink-500"
+                    >
+                         
+                        <img
+                            src="/images/twitter_hu67f5805524553352eb79d9e663a16c6d_18385_40x30_fit_box_3.png"
+                            width="36"
+                            height="30"
+                        />
+                        
+                        <label class="text-xl"> Twitter </label>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.pixiv.net/en/users/61808993"
+                        class="flex justify-between p-4 pr-8 transition duration-150 bg-gray-950 hover:bg-pink-500"
+                    >
+                         
+                        <img
+                            src="/images/pixiv_hu89f52d66c43558851ab8d957b5aea9fc_9516_40x30_fit_box_3.png"
+                            width="30"
+                            height="30"
+                        />
+                        
+                        <label class="text-xl"> Pixiv </label>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://twitch.tv/genthus_"
+                        class="flex justify-between p-4 pr-8 transition duration-150 bg-gray-950 hover:bg-pink-500"
+                    >
+                         
+                        <img
+                            src="/images/twitch_huf9b3bcafb907c6202181c6a3f4f0de65_41204_40x30_fit_box_3.png"
+                            width="26"
+                            height="30"
+                        />
+                        
+                        <label class="text-xl"> Twitch </label>
+                    </a>
+                </li>
+                <li>
+                    <div
+                        class="flex justify-between p-4 pr-8 text-xl copy_text transition duration-150 bg-gray-950 hover:bg-pink-500"
+                        onclick="CopyDisc()"
+                    >
+                         
+                        <img
+                            src="/images/discord_hud9bd8302f7759cde0799b96bf6645515_9835_40x30_fit_box_3.png"
+                            width="40"
+                            height="30"
+                        />
+                        
+                        <label id="discord">genthus</label>
+                    </div>
+                </li>
+                <li>
+                    <a
+                        href="mailto:contact@genthus.art"
+                        class="flex justify-between p-4 pr-8 text-xl copy_text transition duration-150 bg-gray-950 hover:bg-pink-500"
+                    >
+                        
+                        <img
+                            src="/images/mail.svg"
+                            fill="white"
+                            width="30"
+                            height="30"
+                        />
+                        
+                        <label>contact@genthus.art</label>
+                    </a>
+                </li>
+            </ul>
+            <p class="m-4 p-2 text-sm bg-gray-950">
+                This website is still under construction, some things might look weird.
+            </p>
+        </div>
+        <div
+            class="h-full sm:h-screen w-full xl:w-auto xl:grow bg-gradient-to-br from-blue-700 to-blue-900 sm:overflow-auto"
+        >
+            <div class="columns-2xs sm:columns-sm lg:columns:xs gap-2 p-4">
+                
+                <img
+                    src="/portfolio/0-britomart.jpg"
+                    width="4093"
+                    height="2894"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/0-flowerKnightOC.jpg"
+                    width="2250"
+                    height="2250"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/0-koyanClose.png"
+                    width="1903"
+                    height="1903"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/1-bb.jpg"
+                    width="2122"
+                    height="2211"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/3-tamaLancer.jpg"
+                    width="2894"
+                    height="4093"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/4-mary.jpg"
+                    width="2250"
+                    height="2250"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/4-remSketch.jpg"
+                    width="2250"
+                    height="2250"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/4-spoopy.jpg"
+                    width="2250"
+                    height="2250"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/5-ann.jpg"
+                    width="1447"
+                    height="2517"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/5-rin.jpg"
+                    width="1229"
+                    height="2250"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/6-snakeOC.jpg"
+                    width="2250"
+                    height="2250"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/6-yukoSheet.jpg"
+                    width="2047"
+                    height="1447"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/7-ako.jpg"
+                    width="1447"
+                    height="2047"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/8-tamamo.jpg"
+                    width="2250"
+                    height="2250"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/9-girls.jpg"
+                    width="2894"
+                    height="4093"
+                    class="place-self-center m-auto p-2"
+                />
+                
+                <img
+                    src="/portfolio/9-nunStudy.jpg"
+                    width="1266"
+                    height="2250"
+                    class="place-self-center m-auto p-2"
+                />
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+<script>
+var copy_text_val = document.getElementById("discord");
+
+function CopyDisc() {
+    navigator.clipboard.writeText(copy_text_val.innerHTML);
+    alert("copied to clipboard");
+}
+</script>
+ </article>
+        </main>
+    </body>
+</html>

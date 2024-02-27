@@ -1,0 +1,175 @@
+<html>
+    <head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  <title>  </title>
+  
+  <link rel="stylesheet" type="text/css" href="http://genthus.art/css/index.css" />
+</head>
+
+    <body class="h-screen w-screen flex flex-col text-white bg-blue-700 gap-4">
+        <div id="consent" class="w-full h-full fixed bg-gray-950 flex items-center justify-center border-8 border-blue-700 z-40 hidden">
+    <div class="xl:w-2/4 flex flex-col text-center gap-8 border-4 border-blue-700 p-16">
+        <h1 class="text-3xl">Warning</h1>
+        <h2 class="text-xl">This website contains images not suited for those underage and in workplace environments</h2>
+        <div class="flex flex-col gap-8">
+            <button class="p-4 bg-blue-700 hover:bg-pink-500 text-xl" onclick="saveConsent()">Continue to genthus.art</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function saveConsent() {
+    console.log("hi")
+    let d = new Date()
+    d.setTime(d.getTime() + (28*24*60*60*1000))
+    document.cookie = "consent=true; path=/; SameSite=Lax; Secure; expires=" + d.toUTCString()
+    document.getElementById("consent").classList.add("hidden")
+}
+window.onload = () => {
+    let x = document.cookie;
+    if (!x.includes("consent=true")) {
+        document.getElementById("consent").classList.remove("hidden")
+    }
+}
+</script>
+
+        
+        <nav class="bg-gray-950">
+            <div class="md:flex w-full items-center justify-around">
+                <a
+                    href="http://genthus.art/"
+                    class="w-96 text-4xl bg-blue-700 p-4 text-white font-bold justify-center transition duration-150 hover:bg-pink-500"
+                >
+                    Genthus</a
+                >
+                <div class="flex justify-right text-xl gap-8">
+                    
+                    <a
+                        href="http://genthus.art/blog/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >Blog</a
+                    >
+                    
+                    <a
+                        href="http://genthus.art/commissions/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >Commissions</a
+                    >
+                    
+                    <a
+                        href="http://genthus.art/about/"
+                        class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+                    >About</a
+                    >
+                    
+                </div>
+            </div>
+        </nav>
+        
+        <main class="grow">
+            <article class="">
+                
+<main id="main" class="bg-gradient-to-b from-blue-700 to-blue-950">
+    <div
+        class="flex flex-col gap-4 w-full h-auto m-auto p-8 justify-center items-center bg-white text-black">
+        <h1 id="title" class="text-4xl sm:text-6xl font-bold">Website Info</h1>
+        <div class="flex flex-col gap-2 text-center">
+            
+            <h4 id="date">Sun Apr 23 , 2023</h4>
+            
+            <div>
+   
+  <div class="m-auto">
+    <ul id="tags" class="flex justify-center gap-4 text-white">
+      
+      <li>
+        <a href="/tags/programming/" class="bg-blue-700 p-2"
+          >Programming</a
+        >
+      </li>
+      
+      <li>
+        <a href="/tags/meta/" class="bg-blue-700 p-2"
+          >Meta</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+  
+</div>
+ 
+        </div>
+    </div>
+    <div>
+        <div class="w-5/6 mx-auto bg-gray-950">
+            <article id="pandoc">
+                <div class="sm:w-4/6 lg:w-3/6 2xl:w-5/12 m-auto p-2 pb-8 px-8 bg-zinc-800 lg:text-lg xl:text-xl">
+                    <div class="content"><p>I made this website after struggling to find a place in the different social media sites, with none being exactly what I wanted so here I am reinventing the wheel.</p>
+<h3 id="github-repo-for-the-websitehttpsgithubcomgenthusgenthus"><a href="https://github.com/genthus/genthus">Github repo for the website</a></h3>
+<h2 id="tech-used-in-this-website">Tech used in this website</h2>
+<ul>
+<li>HUGO</li>
+<li>Tailwind 3</li>
+<li>Github Pages</li>
+</ul>
+</div>
+                </div>
+            </article>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</main>
+<aside
+    id="meta"
+    class="w-full flex flex-col m-auto items-center p-2 gap-4 bg-gray-950">
+    
+    <div class="w-2/4 flex justify-between">
+        
+        <a class="bg-pink-500 p-2 text-lg" href="http://genthus.art/blog/posts/nihongo400/"
+        >Previous: 400 Days of Learning Japanese</a
+        >
+         
+        <a class="bg-blue-700 p-2 text-lg" href="http://genthus.art/blog/static/software/"
+        >Next: Software</a
+        >
+        
+    </div>
+    
+</aside>
+<footer>
+  <div class="flex justify-center m-auto p-2 text-xl gap-8 text-white bg-blue-700">
+    <a href="http://genthus.art/" class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700">Home</a>
+          
+          <a
+            href="http://genthus.art/blog/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >Blog</a
+          >
+          
+          <a
+            href="http://genthus.art/commissions/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >Commissions</a
+          >
+          
+          <a
+            href="http://genthus.art/about/"
+            class="p-4 text-white transition duration-150 hover:bg-pink-500 border-t-8 border-blue-700"
+            >About</a
+          >
+          
+</footer>
+  </article>
+        </main>
+    </body>
+</html>
