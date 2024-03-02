@@ -14,7 +14,11 @@
         <div class="w-5/6 mx-auto bg-gray-950">
             <article id="pandoc">
                 <div class="sm:w-4/6 lg:w-3/6 2xl:w-5/12 m-auto p-2 pb-8 px-8 bg-zinc-800 lg:text-lg xl:text-xl">
+                    {{ if .Param "no-style" }}
+                    <div> {{ .Content }}</div>
+                    {{ else }}
                     <div class="content">{{ .Content }}</div>
+                    {{ end }}
                 </div>
             </article>
             <!-- {{ with .Param "comments" }} -->
