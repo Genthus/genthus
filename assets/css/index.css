@@ -528,14 +528,6 @@ html {
   position: fixed;
 }
 
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
 .z-40 {
   z-index: 40;
 }
@@ -1080,16 +1072,12 @@ html {
 }
 
 @media (min-width: 1280px) {
-  .xl\:w-auto {
-    width: auto;
-  }
-
-  .xl\:w-1\/4 {
-    width: 25%;
-  }
-
   .xl\:w-2\/4 {
     width: 50%;
+  }
+
+  .xl\:w-auto {
+    width: auto;
   }
 
   .xl\:grow {
