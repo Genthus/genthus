@@ -4,10 +4,10 @@ date: 2023-03-31T09:32:11-06:00
 clean: true
 ---
 
-<!-- ![commSheet](/commSheet.png) -->
 
 # Pricing
-{{< commissionPrices >}}
+<!-- {{< commissionPrices >}} -->
+![commSheet](/commSheet.jpg)
 
 If your request isn't contemplated in this form or you have any questions, feel free to 
 email me or contact me on discord (genthus) or at [commissions@genthus.art](mailto:commissions@genthus.art)
